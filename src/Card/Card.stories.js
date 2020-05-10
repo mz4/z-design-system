@@ -3,11 +3,8 @@ import styled from 'styled-components';
 
 import { Card } from './Card';
 
-const Wrapper = styled.section`
+const StoryWrapper = styled.section`
   margin: 2em;
-  & div {
-    margin-bottom: 1em;
-  }
 `;
 
 export default {
@@ -17,21 +14,19 @@ export default {
 
 export const allCards = () => (
   <div>
-    <Wrapper>
-      <Card title='Hotel Location' footer='This is footer'>
-        <p>
-          <strong>Formatted Address :</strong>
-          <span>May street</span>
-        </p>
-        <p>
-          <strong>ZipCode :</strong>
-          <span>090300</span>
-        </p>
-        <p>
-          <strong>City :</strong>
-          <span>Paris</span>
-        </p>
+    <StoryWrapper>
+      <Card 
+        title='Hotel Coloseum' 
+        subtitle='Rome, Spanish Steps' 
+        footer=''
+        vote='Very Good'
+        reviews='60 Reviews'
+        type='Double Room'
+        availability='1 room left'
+        price='$ 150'
+        buttonLabel='Book'
+        >
       </Card>
-    </Wrapper>
+    </StoryWrapper>
   </div>
 );

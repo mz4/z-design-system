@@ -10,14 +10,6 @@ const Text = styled.span`
   vertical-align: top;
 `;
 
-const Loading = styled.span`
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  opacity: 0;
-`;
-
 const APPEARANCES = {
   DANGER: 'danger',
   SUCCESS: 'success',

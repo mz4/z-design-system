@@ -1,19 +1,73 @@
 import React from 'react';
-import { Wrapper, Header, Content, Footer } from './Card.style';
+import { Button } from '../Button/Button';
+import hotelpic from '../shared/51603421.jpg';
+
+import { 
+  Wrapper,
+  Content, 
+  HeaderContainer,
+  Header,
+  FooterContainer, 
+  Title,
+  SubTitle,
+  Vote,
+  ReviewHotel,
+  ReviewCounter,
+  Image,
+  Info,
+  Img,
+  BodyContainer,
+  RoomInfo,
+  Type,
+  Availability,
+  RoomPrice,
+  Price
+} from './Card.style';
 
 export function Card({
   title,
-  className,
-  header,
-  content,
-  children,
-  footer,
+  subtitle,
+  vote,
+  reviews,
+  type,
+  availability,
+  price,
+  buttonLabel,
+  className
 }) {
   return (
     <Wrapper className={className}>
-      <Header>{header ? header : <h2>{title}</h2>}</Header>
-      <Content>{content ? content : children}</Content>
-      {footer && <Footer>{footer}</Footer>}
+      <Image>
+        <Img src={hotelpic} />
+      </Image>
+      <Info>
+        <Content>
+          <HeaderContainer>
+            <Header>
+              <Title>{title}</Title>
+              <SubTitle>{subtitle}</SubTitle>
+            </Header>
+            <ReviewHotel>
+              <Vote>{vote}</Vote>
+              <ReviewCounter>{reviews}</ReviewCounter>
+            </ReviewHotel>
+          </HeaderContainer>
+          <BodyContainer>
+            <RoomInfo>
+              <Type>{type}</Type>
+              <Availability>{availability}</Availability>
+            </RoomInfo>
+            <RoomPrice>
+              <Price>{price}</Price>
+            </RoomPrice>
+          </BodyContainer>
+        </Content>
+        <FooterContainer>
+            <Button appearance="primary" >
+              {buttonLabel}
+            </Button>
+          </FooterContainer>
+      </Info>
     </Wrapper>
   );
 }
