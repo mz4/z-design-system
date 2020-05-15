@@ -12,3 +12,4 @@ export * from './Card/Card';
 export * from './Icon/Icon';
 export * from './Loader/Loader';
 export * from './Link';
+export * from './Offer/Offer';
